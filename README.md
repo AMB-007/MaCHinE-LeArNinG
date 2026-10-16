@@ -1,22 +1,4 @@
 # 🤖 Machine Learning Master Repository
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/AMB-007/MaCHinE-LeArNinG/main/.github/assets/banner.png" alt="Machine Learning Banner" width="100%" onerror="this.style.display='none'"/>
-</p>
-
-<p align="center">
-  <strong>Comprehensive practical guide to Machine Learning algorithms, statistical foundations, and real-world predictive modeling.</strong>
-</p>
-
-<p align="center">
-  <a href="https://github.com/AMB-007/MaCHinE-LeArNinG/stargazers"><img src="https://img.shields.io/github/stars/AMB-007/MaCHinE-LeArNinG?style=for-the-badge&color=gold" alt="Stars"></a>
-  <a href="https://github.com/AMB-007/MaCHinE-LeArNinG/network/members"><img src="https://img.shields.io/github/forks/AMB-007/MaCHinE-LeArNinG?style=for-the-badge&color=blue" alt="Forks"></a>
-  <a href="https://github.com/AMB-007/MaCHinE-LeArNinG/issues"><img src="https://img.shields.io/github/issues/AMB-007/MaCHinE-LeArNinG?style=for-the-badge&color=red" alt="Issues"></a>
-  <a href="https://github.com/AMB-007/MaCHinE-LeArNinG/commits/main"><img src="https://img.shields.io/github/last-commit/AMB-007/MaCHinE-LeArNinG?style=for-the-badge&color=green" alt="Last Commit"></a>
-</p>
-
----
-
 ## 🛠️ Tech Stack & Ecosystem
 
 <p align="center">
