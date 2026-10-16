@@ -9,7 +9,6 @@
 </p>
 
 <p align="center">
-
   <a href="https://github.com/AMB-007/MaCHinE-LeArNinG/stargazers"><img src="https://img.shields.io/github/stars/AMB-007/MaCHinE-LeArNinG?style=for-the-badge&color=gold" alt="Stars"></a>
   <a href="https://github.com/AMB-007/MaCHinE-LeArNinG/network/members"><img src="https://img.shields.io/github/forks/AMB-007/MaCHinE-LeArNinG?style=for-the-badge&color=blue" alt="Forks"></a>
   <a href="https://github.com/AMB-007/MaCHinE-LeArNinG/issues"><img src="https://img.shields.io/github/issues/AMB-007/MaCHinE-LeArNinG?style=for-the-badge&color=red" alt="Issues"></a>
