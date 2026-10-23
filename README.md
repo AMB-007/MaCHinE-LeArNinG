@@ -93,6 +93,24 @@ Every module emphasizes:
 - **Dataset**: `melon.csv`
 - **Model Pipeline**: Feature scaling, outlier resistance, and regression diagnostics.
 
+#### 🔹 Advertising Budget vs. Sales Forecasting (Multiple Linear Regression)
+*Multi-channel marketing attribution modeling using multivariate regression.*
+- **Feature Modeling**: Assessing cross-channel budget allocation across TV, Radio, and Newspaper advertising vs. gross product sales.
+- **Data Preprocessing**: Feature normalization with `MinMaxScaler`, correlation heatmaps, and regression coefficient/intercept weight interpretation.
+- **Model Evaluation**: Comprehensive residual analysis measuring `MAE`, `MAPE`, `MSE`, and `RMSE`.
+- **Dataset**: `advertising.csv` | **Notebook**: `advertising_sales_prediction.ipynb`
+
+#### 🔹 50 Startups Venture Profit Prediction
+*Multivariate financial analytics predicting startup profitability based on operational expenditures.*
+- **End-to-End Pipeline**: Handling mixed feature types using `make_column_transformer` with `OneHotEncoder` for categorical location (`State`) and continuous expense vectors (R&D, Administration, Marketing).
+- **Regression Diagnostics**: OLS regression modeling with goodness-of-fit evaluation via $R^2$ Score and Mean Absolute Percentage Error (`MAPE`).
+- **Dataset**: `50_Startups.csv` | **Notebook**: `startup_profit_prediction.ipynb`
+
+#### 🔹 Meteorological Daily Rainfall Analysis
+*Atmospheric data exploration and precipitation correlation modeling.*
+- **Exploratory Data Analysis (EDA)**: Investigating precipitation distributions, multi-attribute correlation matrices, and meteorological trend patterns.
+- **Dataset**: `customized_daily_rainfall_data.csv` | **Notebook**: `daily_rainfall_analysis.ipynb`
+
 ---
 
 ## 📊 Evaluation Metrics Matrix
@@ -107,6 +125,7 @@ The models across this repository are evaluated using industry-standard statisti
 | **Classification** | **F1-Score** | $2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}$ | Harmonized metric for imbalanced datasets |
 | **Classification** | **ROC-AUC** | Area under the True Positive Rate vs. False Positive Rate curve | Threshold-independent discrimination power |
 | **Regression** | **MAE** | $\frac{1}{n} \sum \|y_i - \hat{y}_i\|$ | Robust to extreme outliers |
+| **Regression** | **MAPE** | $\frac{100\%}{n} \sum \|\frac{y_i - \hat{y}_i}{y_i}\|$ | Scale-independent percentage accuracy |
 | **Regression** | **MSE** | $\frac{1}{n} \sum (y_i - \hat{y}_i)^2$ | Penalizes large errors heavily |
 | **Regression** | **RMSE** | $\sqrt{\frac{1}{n} \sum (y_i - \hat{y}_i)^2}$ | Interpretable error in original target units |
 | **Regression** | **$R^2$ Score** | $1 - \frac{\sum (y_i - \hat{y}_i)^2}{\sum (y_i - \bar{y})^2}$ | Proportion of variance explained by model |
