@@ -37,6 +37,9 @@ Every module emphasizes:
 - **Task Categorization**: Discerning between discrete categorical targets (Classification) and continuous numerical values (Regression).
 - **Distance Metrics & Proximity Modeling**: Mathematical foundation of Euclidean distance, Manhattan distance, and Minkowski formulations used in instance-based learning.
 - **Generalization & The Bias-Variance Tradeoff**: Analyzing underfitting, overfitting, model capacity, and regularization strategies.
+- **Feature Engineering & Transformation**:
+  - Temporal & Datetime Feature Engineering: Parsing string timestamps with `pd.to_datetime()`, extracting calendar components (`Year`, `Month`, `Day`), and removing raw timestamp columns to make temporal signals consumable by ML estimators.
+  - **Notebook**: `feature_engineering.ipynb`
 
 ---
 
