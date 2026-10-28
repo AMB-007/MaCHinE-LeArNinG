@@ -115,6 +115,14 @@ Every module emphasizes:
 - **Exploratory Data Analysis (EDA)**: Investigating precipitation distributions, multi-attribute correlation matrices, and meteorological trend patterns.
 - **Dataset**: `customized_daily_rainfall_data.csv` | **Notebook**: `daily_rainfall_analysis.ipynb`
 
+#### 🔹 Used Car Price Prediction (End-to-End Pipeline)
+*Comprehensive regression pipeline predicting automotive market valuation from technical and historical attributes.*
+- **Data Cleaning & Wrangling**: Imputing missing values, extracting vehicle brand identifiers from unstructured model names, and converting alphanumeric specifications (`Mileage`, `Engine`, `Power`) into structured float representations.
+- **Categorical Feature Encoding**: One-Hot Encoding across categorical domains (`Location`, `Fuel_Type`, `Transmission`, `Owner_Type`, `Brand`) with train-test feature space alignment.
+- **Preprocessing & Scaling**: Normalization using `MinMaxScaler` across input dimensions.
+- **Model Training & Diagnostics**: Multivariate Linear Regression evaluated with Mean Absolute Percentage Error (`MAPE`) and Goodness-of-Fit ($R^2$ Score).
+- **Datasets**: `train-data.csv`, `test-data.csv` | **Notebooks**: `car_price_prediction_annotated.ipynb` (step-by-step markdown walkthrough), `car_price_prediction_colab.ipynb` (Colab executable)
+
 ---
 
 ## 📊 Evaluation Metrics Matrix
