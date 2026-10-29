@@ -51,6 +51,8 @@ Every module emphasizes:
 - **Iris Species Classification**: Multi-class benchmark classifying flower species using petal and sepal measurements.
 - **Diabetes Diagnostic Screening**: Medical screening task predicting diabetes onset based on clinical diagnostic metrics.
 - **Student Performance Multiclass Analytics**: Comprehensive multi-tier evaluation predicting academic grading tiers.
+- **Heart Disease Classification with GridSearchCV Tuning**: Cardiovascular risk classification incorporating automated hyperparameter optimization across neighbor counts ($k \in [3, 5, 7, 9]$) and weighting functions (`uniform` vs. `distance`) using `StandardScaler` feature normalization.
+  - **Dataset**: `heart.csv` | **Notebook**: `knn_heart_disease_gridsearchcv.ipynb`
 
 #### 🔹 Naive Bayes
 *Probabilistic classification leveraging Bayes' Theorem under the conditional feature independence assumption.*
