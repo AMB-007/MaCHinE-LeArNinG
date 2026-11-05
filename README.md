@@ -38,8 +38,15 @@ Every module emphasizes:
 - **Distance Metrics & Proximity Modeling**: Mathematical foundation of Euclidean distance, Manhattan distance, and Minkowski formulations used in instance-based learning.
 - **Generalization & The Bias-Variance Tradeoff**: Analyzing underfitting, overfitting, model capacity, and regularization strategies.
 - **Feature Engineering & Transformation**:
-  - Temporal & Datetime Feature Engineering: Parsing string timestamps with `pd.to_datetime()`, extracting calendar components (`Year`, `Month`, `Day`), and removing raw timestamp columns to make temporal signals consumable by ML estimators.
+  - Temporal & Datetime Decomposition: Parsing string timestamps with `pd.to_datetime()`, extracting calendar components (`Year`, `Month`, `Day`, `DayOfWeek`, `Quarter`, `IsWeekend`, `IsMonthEnd`), and purging redundant raw timestamp columns.
+  - Cyclical & Discretization Transforms: Implementing Sine/Cosine cyclical encoding for periodic features and continuous feature binning (`pd.cut`).
   - **Notebook**: `feature_engineering.ipynb`
+- **Outlier Detection & Treatment**:
+  - Interquartile Range (IQR) Method: Tukey's fences calculation ($Q_1 - 1.5\times IQR$, $Q_3 + 1.5\times IQR$).
+  - Outlier Handling Strategies: Trimming (row removal) vs. Capping / Winsorization (clamping via `np.clip`).
+  - Parametric Z-Score 3-Sigma Rule: Standard deviation thresholding ($|Z| > 3$).
+  - Comparative Visual Diagnostics: Side-by-side multi-panel Boxplots and KDE distribution plots.
+  - **Notebook**: `outlier_detection_and_handling.ipynb`
 
 ---
 
@@ -76,6 +83,14 @@ Every module emphasizes:
 
 #### 🔹 Hybrid & Comparative Studies
 - **Employee Turnover Prediction (KNN vs. Naive Bayes)**: Direct comparative benchmark evaluating distance-based vs. probabilistic models under identical preprocessing, with cross-validated ROC-AUC and F1 analysis.
+
+#### 🔹 End-to-End Classification Capstones
+- **Titanic Passenger Survival Prediction**:
+  - **Data Cleaning & Imputation**: Group-median imputation for `Age` conditioned on `Pclass`, mode imputation for `Embarked`, and high-sparsity dropping of `Cabin`.
+  - **Feature Engineering**: Parsing passenger titles (`Title`) from names with rare-title grouping, engineering `FamilySize` and `IsAlone` indicators, and one-hot encoding categorical features (`Sex`, `Embarked`, `Title`).
+  - **Multi-Model Benchmark**: Comparing Logistic Regression, K-Nearest Neighbors, Decision Tree, and Random Forest models with `StandardScaler` normalization.
+  - **Diagnostics**: Confusion matrix heatmap, classification report, and Random Forest feature importance ranking.
+  - **Dataset**: `Titanic-Dataset.csv` | **Notebook**: `titanic_survival_prediction.ipynb`
 
 ---
 
@@ -127,6 +142,26 @@ Every module emphasizes:
 
 ---
 
+### 4. Unsupervised Learning & Clustering
+
+#### 🔹 K-Means Iris Flower Clustering
+*Centroid-based geometric partitioning of unlabelled multi-dimensional botanical data.*
+- **Optimal Cluster Identification**: Computing Within-Cluster Sum of Squares (WCSS / Inertia) via the Elbow Method ($k \in [1..10]$) and evaluating cohesion using Silhouette Score analysis ($k \in [2..8]$).
+- **Cluster Visualization**: 2D scatter projections mapping clusters and centroids across Petal and Sepal dimensions.
+- **Ground Truth Validation**: Cross-tabulating unsupervised clusters against actual botanical species (`pd.crosstab` contingency matrix heatmap).
+- **Downstream Classification**: Training a K-Nearest Neighbors (KNN) classifier to predict cluster memberships.
+- **Dataset**: `Iris.csv` | **Notebook**: `iris_kmeans_clustering.ipynb`
+
+#### 🔹 Mall Customer Behavioral Segmentation
+*Commercial customer profiling and persona segmentation based on earning and spending metrics.*
+- **Exploratory Demographic Analysis**: Inspecting gender proportions (pie charts) and age/income/spending distributions.
+- **Behavioral Clustering ($k=5$)**: Partitioning Annual Income vs. Spending Score via K-Means with centroids.
+- **Customer Persona Profiling**: Segmenting shoppers into actionable marketing personas: *Target Customers* (High Income, High Spending), *Careful Savers* (High Income, Low Spending), *Standard Core* (Mid Income, Mid Spending), *Careless Impulsive* (Low Income, High Spending), and *Sensible* (Low Income, Low Spending).
+- **Downstream Classification**: Training and benchmarking supervised models (KNN, Gaussian Naive Bayes, Decision Tree, Random Forest) to automatically categorize incoming customer profiles.
+- **Dataset**: `Mall_Customers.csv` | **Notebook**: `mall_customer_segmentation.ipynb`
+
+---
+
 ## 📊 Evaluation Metrics Matrix
 
 The models across this repository are evaluated using industry-standard statistical metrics:
@@ -143,6 +178,8 @@ The models across this repository are evaluated using industry-standard statisti
 | **Regression** | **MSE** | $\frac{1}{n} \sum (y_i - \hat{y}_i)^2$ | Penalizes large errors heavily |
 | **Regression** | **RMSE** | $\sqrt{\frac{1}{n} \sum (y_i - \hat{y}_i)^2}$ | Interpretable error in original target units |
 | **Regression** | **$R^2$ Score** | $1 - \frac{\sum (y_i - \hat{y}_i)^2}{\sum (y_i - \bar{y})^2}$ | Proportion of variance explained by model |
+| **Clustering** | **Silhouette Score** | $\frac{b - a}{\max(a, b)}$ | Unsupervised cluster cohesion and separation |
+| **Clustering** | **WCSS / Inertia** | $\sum_{i=1}^k \sum_{x \in C_i} \|x - \mu_i\|^2$ | Within-cluster variance in Elbow method |
 
 ---
 
