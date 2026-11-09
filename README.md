@@ -1,10 +1,11 @@
-# 🤖 Machine Learning Master Repository
+# 🤖 Machine Learning and Natural Language Processing
 
 ## 🛠️ Tech Stack & Ecosystem
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
   <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="scikit-learn" />
+  <img src="https://img.shields.io/badge/NLTK-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="NLTK" />
   <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy" />
   <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" />
   <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter" />
@@ -19,7 +20,7 @@
 
 ## 📖 Project Overview
 
-This repository provides an end-to-end curriculum and hands-on laboratory for **Machine Learning (ML)**. It bridges the gap between statistical theory and production-grade implementation, covering foundational concepts, classification models, regression pipelines, and comparative benchmarking across real-world datasets.
+This repository provides an end-to-end curriculum and hands-on laboratory for **Machine Learning (ML)** and **Natural Language Processing (NLP)**. It bridges the gap between statistical theory and production-grade implementation, covering foundational concepts, classification models, regression pipelines, and comparative benchmarking across real-world datasets.
 
 Every module emphasizes:
 - **Mathematical Intuition**: Understanding the underlying equations, loss functions, and probability theory.
@@ -162,6 +163,20 @@ Every module emphasizes:
 
 ---
 
+### 5. Natural Language Processing (NLP)
+
+#### 🔹 NLP Foundations & Text Preprocessing Pipeline
+*Linguistic data preparation and vector representation engineering for text analytics.*
+- **Corpus Resources & Tokenization**: Word tokenization (`word_tokenize`) and sentence boundary segmentation (`sent_tokenize`) with NLTK tokenizers.
+- **Linguistic Noise & Stopword Filtering**: Case-folding and filtering non-informative functional stopwords.
+- **Morphological Normalization**: Suffix-stripping heuristic algorithms (Porter Stemmer vs. Snowball Stemmer) compared against vocabulary-driven lemma resolution (WordNet Lemmatizer with Part-of-Speech tagging).
+- **Regex Cleaning**: Pattern substitution using regular expressions (`re.sub`) to purge punctuation, symbols, and irregular spacing.
+- **Modular Pipeline**: End-to-end sanitization function transforming unstructured prose into clean token sequences.
+- **Numerical Vectorization**: Feature space extraction via Bag-of-Words (`CountVectorizer`) and Term Frequency - Inverse Document Frequency (`TfidfVectorizer`).
+- **Notebook**: `nlp_foundations_and_text_preprocessing.ipynb`
+
+---
+
 ## 📊 Evaluation Metrics Matrix
 
 The models across this repository are evaluated using industry-standard statistical metrics:
@@ -180,6 +195,7 @@ The models across this repository are evaluated using industry-standard statisti
 | **Regression** | **$R^2$ Score** | $1 - \frac{\sum (y_i - \hat{y}_i)^2}{\sum (y_i - \bar{y})^2}$ | Proportion of variance explained by model |
 | **Clustering** | **Silhouette Score** | $\frac{b - a}{\max(a, b)}$ | Unsupervised cluster cohesion and separation |
 | **Clustering** | **WCSS / Inertia** | $\sum_{i=1}^k \sum_{x \in C_i} \|x - \mu_i\|^2$ | Within-cluster variance in Elbow method |
+| **NLP** | **TF-IDF** | $\text{TF}(t, d) \times \left(\log\frac{1 + |D|}{1 + \text{DF}(t)} + 1\right)$ | Term importance weighting in text representation |
 
 ---
 
@@ -208,7 +224,7 @@ source venv/bin/activate
 
 ### 3. Install Required Dependencies
 ```bash
-pip install numpy pandas scikit-learn matplotlib seaborn jupyter
+pip install numpy pandas scikit-learn matplotlib seaborn jupyter nltk
 ```
 
 ---
