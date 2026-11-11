@@ -175,6 +175,14 @@ Every module emphasizes:
 - **Numerical Vectorization**: Feature space extraction via Bag-of-Words (`CountVectorizer`) and Term Frequency - Inverse Document Frequency (`TfidfVectorizer`).
 - **Notebook**: `nlp_foundations_and_text_preprocessing.ipynb`
 
+#### 🔹 Twitter Entity Sentiment Analysis (Multiclass NLP)
+*End-to-end sentiment classification pipeline categorizing social media text into Positive, Neutral, and Negative sentiments.*
+- **Exploratory Data Analysis (EDA)**: Brand/Media mentions breakdown (horizontal bar charts), sentiment class distribution, and irrelevant tweet filtering.
+- **Linguistic Preprocessing**: Social-media tokenization using NLTK `TweetTokenizer`, non-alphanumeric character stripping (`[^a-zA-Z0-9]`), minimum word-length filtering ($\ge 3$ characters), Snowball stemming, and English stopword elimination.
+- **Text Vectorization**: Extracting document-term sparse representations via `TfidfVectorizer`.
+- **Multi-Model Benchmark**: Training and evaluating **Multinomial Naive Bayes**, **K-Nearest Neighbors (KNN)**, **Decision Tree**, and **Random Forest** with comparative accuracy bar charts and single-sample inference testing.
+- **Dataset**: `twitter_validation.csv` | **Notebook**: `twitter_sentiment_analysis.ipynb`
+
 ---
 
 ## 📊 Evaluation Metrics Matrix
