@@ -183,6 +183,15 @@ Every module emphasizes:
 - **Multi-Model Benchmark**: Training and evaluating **Multinomial Naive Bayes**, **K-Nearest Neighbors (KNN)**, **Decision Tree**, and **Random Forest** with comparative accuracy bar charts and single-sample inference testing.
 - **Dataset**: `twitter_validation.csv` | **Notebook**: `twitter_sentiment_analysis.ipynb`
 
+#### 🔹 SMS Spam Detection & Classification (Binary NLP)
+*Binary text classification pipeline distinguishing Spam from Non-Spam (Ham) mobile text messages.*
+- **Dataset Harmonization**: Aggregating train and test message partitions (`SMS_train.csv` and `SMS_test.csv`) with `ISO-8859-1` encoding.
+- **Exploratory Data Analysis (EDA)**: Class balance inspection (Spam vs. Non-Spam bar charts), duplicate detection, and uninformative index stripping (`S. No.`).
+- **Text Preprocessing**: Tokenization via `TweetTokenizer`, non-alphanumeric noise elimination (`[^a-zA-Z0-9]`), length thresholding ($\ge 3$ characters), `SnowballStemmer` morphological root reduction, and NLTK English stopword purging.
+- **TF-IDF Feature Space**: High-dimensional sparse term frequency weighting via `TfidfVectorizer`.
+- **Classifier Benchmark**: Multi-model performance evaluation across **Multinomial Naive Bayes**, **Random Forest**, **Decision Tree**, and **K-Nearest Neighbors (KNN)** with an annotated comparative accuracy bar chart and real-world message inference validation.
+- **Datasets**: `SMS_train.csv`, `SMS_test.csv` | **Notebook**: `sms_spam_detection.ipynb`
+
 ---
 
 ## 📊 Evaluation Metrics Matrix
