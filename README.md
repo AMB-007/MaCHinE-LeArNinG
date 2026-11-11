@@ -224,8 +224,8 @@ The models across this repository are evaluated using industry-standard statisti
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/AMB-007/MaCHinE-LeArNinG.git
-cd MaCHinE-LeArNinG
+git clone https://github.com/AMB-007/MaCHinE-LeArNinG-AnD-NaTuRAL-LanGuaGE-ProCesSiNg.git
+cd MaCHinE-LeArNinG-AnD-NaTuRAL-LanGuaGE-ProCesSiNg
 ```
 
 ### 2. Create a Virtual Environment
